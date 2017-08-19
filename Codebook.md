@@ -17,4 +17,22 @@ Process
 10.I combine this cleaned data into a single dataframe, called HAR (for "Human Activity Recognition") (assignment part 1)
 11. Finally, I create a separate dataframe of summarized tidy data (called "averaged"), which groups the data by activity and by subject, removes any other non-phone-data columns, and finds the mean for all variables by the aforementioned groups (assignment part 5)
 
-(add variable descriptions, and change readme to indicate the source data as well. Add that source data, the script, and yo're done!)
+Variables
+----------
+
+In HAR dataframe:
+- subject - ID describing which participant was being measured by the following recorded data
+- activity - one of 6 physical actions performed by each participant, during which movement data was recorded:
+  - walking
+  - walking_upstairs
+  - walking_downstairs
+  - sitting
+  - standing
+  - laying
+- source - variable labeling whether the data derives from the "test" group, or the "train" group
+- 79 other variables, named according to the signals being produced by the accelerometer and gyroscope in the phone, measuring movement. See "features_info.txt in the original UCI HAR Dataset directory (included) for more detail.
+
+In "averaged" dataframe:
+- subject - same as above
+- activity - same as above
+- 79 other variables - same variables as above, averaged per activity, per subject.
